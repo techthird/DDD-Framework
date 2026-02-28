@@ -8,12 +8,24 @@
 - 🔍 **用户信息查询**：支持分页查询、单用户查询、ID精准查询
 
 ## 技术架构
-
 采用经典DDD四层架构模式：
 - **接口层**：RESTful API接口
 - **应用层**：业务流程编排
 - **领域层**：核心业务逻辑
 - **基础设施层**：技术实现支撑
+
+# AI快速创建新表类文件，搭配ddd-mysql-crud技能
+> 💡 .claude/skills/ddd-mysql-crud/SKILL.md
+**使用方式：**
+```
+请根据 ddd-mysql-crud 技能，按下面表结构生成 DDD 各层代码（创建、修改、分页查询、根据 ID 查询）：
+
+create table t_xxx (
+id bigint not null auto_increment comment '主键',
+...
+primary key (id)
+) engine = InnoDB default charset = utf8mb4 comment = 'xxx表';
+```
 
 # DDD分层职责
 

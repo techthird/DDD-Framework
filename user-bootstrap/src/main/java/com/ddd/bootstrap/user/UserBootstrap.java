@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication(exclude = DruidDataSourceAutoConfigure.class)
 //@EnableFeignClients(basePackages = {"com.ddd"})
 @ComponentScan(basePackages = {"com.ddd"})
-@MapperScan({"com.ddd.infrastructure.user.mapper"})
+@MapperScan({"com.ddd.infrastructure.*.mapper"})
 @Slf4j
 @EnableAsync
 public class UserBootstrap {
