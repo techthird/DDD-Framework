@@ -5,8 +5,8 @@ import com.ddd.domain.user.entity.dto.UserDTO;
 import com.ddd.domain.user.entity.model.UserModel;
 import com.ddd.domain.user.entity.query.UserPageQuery;
 import com.ddd.domain.user.entity.query.UserQuery;
+import com.ddd.sdk.entity.PageResult;
 
-import java.util.List;
 
 public interface UserRepository {
 
@@ -17,7 +17,7 @@ public interface UserRepository {
 
   Integer update(UserAggregate userAggregate);
 
-  List<UserDTO> selectUserPage(UserPageQuery userPageQuery);
+  PageResult<UserDTO> selectUserPage(UserPageQuery userPageQuery);
 
   UserDTO selectUser(UserQuery userQuery);
 

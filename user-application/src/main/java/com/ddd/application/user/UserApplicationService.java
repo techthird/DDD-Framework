@@ -7,6 +7,8 @@ import com.ddd.domain.user.entity.dto.UserDTO;
 import com.ddd.domain.user.entity.command.SubscribeSMSNotifyCommand;
 import com.ddd.domain.user.entity.query.UserPageQuery;
 import com.ddd.domain.user.entity.query.UserQuery;
+import com.ddd.sdk.entity.PageResult;
+
 import java.util.List;
 
 
@@ -18,7 +20,7 @@ public interface UserApplicationService {
 
   void subscribeSMSNotify(SubscribeSMSNotifyCommand subscribeSMSNotifyCommand);
 
-  List<UserDTO> queryUserPage(UserPageQuery userPageQuery);
+  PageResult<UserDTO> queryUserPage(UserPageQuery userPageQuery);
 
   UserDTO queryUser(UserQuery userQuery);
 

@@ -5,7 +5,23 @@ spring:
     active: dev
   application:
     name: user-service
-
+  datasource:
+    dynamic:
+      primary: master
+      strict: false
+      datasource:
+        master:
+          url: jdbc:mysql://127.0.0.1:3306/db_ddd?allowMultiQueries=true&serverTimezone=Asia/Shanghai&useSSL=false&rewriteBatchedStatements=true
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
 
 swagger:
   enable: true
+
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

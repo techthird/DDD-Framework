@@ -2,6 +2,7 @@ package com.ddd.interfaces.controller.user;
 
 
 import com.ddd.application.user.UserApplicationService;
+import com.ddd.sdk.entity.PageResult;
 import com.ddd.sdk.entity.ResponseBase;
 import com.ddd.domain.user.entity.command.UserCreateCommand;
 import com.ddd.domain.user.entity.command.UserUpdateCommand;
@@ -53,7 +54,7 @@ public class UserController {
 
     @ApiOperation(value = "分页查询用户信息")
     @PostMapping("/queryUserPage")
-    public ResponseBase<List<UserDTO>> queryUserPage(@RequestBody @Validated UserPageQuery userPageQuery) {
+    public ResponseBase<PageResult<UserDTO>> queryUserPage(@RequestBody @Validated UserPageQuery userPageQuery) {
         return ResponseBase.success(userApplicationService.queryUserPage(userPageQuery));
     }
 

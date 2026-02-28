@@ -124,9 +124,9 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ResponseBase<?> exception(Exception e) {
-        log.info("业务异常 exception={}", e.getMessage(), e);
+        log.error("系统异常 exception={}", e.getMessage(), e);
         return ResponseBase.fail(ErrorCodeEnum.SYS_EXCEPTION.getCode(),
-                "异常信息:" + e.getMessage());
+                ErrorCodeEnum.SYS_EXCEPTION.getMsg());
     }
 
 }

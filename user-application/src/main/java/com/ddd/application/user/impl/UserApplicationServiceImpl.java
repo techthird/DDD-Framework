@@ -18,6 +18,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import com.ddd.domain.user.service.UserDomainService;
+import com.ddd.sdk.entity.PageResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
@@ -98,7 +99,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     }
 
     @Override
-    public List<UserDTO> queryUserPage(UserPageQuery userPageQuery) {
+    public PageResult<UserDTO> queryUserPage(UserPageQuery userPageQuery) {
         return userRepository.selectUserPage(userPageQuery);
     }
 

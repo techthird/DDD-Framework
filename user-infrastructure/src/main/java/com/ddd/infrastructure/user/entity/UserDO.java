@@ -1,20 +1,20 @@
 package com.ddd.infrastructure.user.entity;
 
-/*import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;*/
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 /**
  * 用户DO-- 数据库映射
  */
 @Data
-//@TableName("t_user")
+@TableName("t_user")
 public class UserDO {
   /**
    * 用户ID
    */
-  //@TableId(type = IdType.AUTO)
+  @TableId(type = IdType.AUTO)
   private Integer userId;
 
   /**
