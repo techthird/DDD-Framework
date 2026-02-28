@@ -15,8 +15,6 @@
 - **领域层**：核心业务逻辑
 - **基础设施层**：技术实现支撑
 
-> 💡 查看完整API定义：`com.ddd.interfaces.controller.user.UserController.java`
-
 # DDD分层职责
 
 | 层次 | 英文名称 | 核心职责                   | 主要组件                                          | 依赖关系 |
